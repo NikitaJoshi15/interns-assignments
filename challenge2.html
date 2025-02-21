@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Send Mail</title>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+
+
+</head>
+
+<body>
+    <form method="post">
+        <input type="button" value="Send Email" onclick="sendEmail()" />
+    </form>
+
+    <script type="text/javascript">
+        function sendEmail() {
+            Email.send({
+                Host: "hr@ignitershub.com",
+                Username: "nikita",
+                Password: "nikita@",
+                To:"hr@ignitershub.com" ,
+                From: "joshinikita415@gmail.com",
+                Subject: "Challenge 3 completed",
+                text: 'Dear HR,\n\nMy Name:[Nikita] \nSemester: [8th]\nBranch: [CSE]\nRoll Number: [40]\n\nRegards,\n[Nikita]',
+                Body: "Well that was easy!!",
+            })
+                .then(function (message) {
+                    alert("mail sent successfully")
+                });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+</head>
+<body>
+    <h1>String Manipulation</h1>
+    
+
+    <script >function processSentence(sentence) {
+        // Count the number of words
+        let words = sentence.split(" ");
+        let wordCount = words.length;
+    
+
+        // Reverse the sentence using a for loop
+        let reversedSentence = "";
+        for (let i = words.length - 1; i >= 0; i--) {
+            reversedSentence += words[i] + " ";
+        }
+        reversedSentence = reversedSentence.trim(); // Remove extra space at the end
+    
+
+        // Replace spaces with hyphens using a for loop
+        let modifiedSentence = "";
+        for (let i = 0; i < sentence.length; i++) {
+            if (sentence[i] === " ") {
+                modifiedSentence += "-";
+            } else {
+                modifiedSentence += sentence[i];
+            }
+        }
+
+    
+        // Print results
+        console.log(`Number of words: ${wordCount}`);
+        console.log(`Reversed sentence: ${reversedSentence}`);
+        console.log(`Modified sentence: ${modifiedSentence}`);
+    }
+    let inputSentence = "The quick brown fox";
+    processSentence(inputSentence);
+    </script>
+    
+</body>
+</html>

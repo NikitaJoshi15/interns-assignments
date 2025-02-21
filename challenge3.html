@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+</head>
+<body>
+    <h1>Palindrome Checker</h1>
+    <script >
+         function isPalindrome(str) {
+        let j = str.length - 1
+        for (let i = 0; i < str.length / 2; i++) {
+            if (str[i] != str[j]) {
+                return false;
+            }
+            j--;
+        }
+        return true;
+    }
+
+    // Get user input (for browsers)
+     const input = prompt("Enter a string:");
+
+    // Check if it's a palindrome and display the result
+    if (isPalindrome(input)) {
+    alert(`The string '${input}' is a palindrome.`);
+    } else {
+    alert(`The string '${input}' is NOT a palindrome.`);
+    }
+    </script>
+</body>
+</html>
